@@ -9,6 +9,10 @@ app.use(express.json());
 
 app.use("/posts", postsRouter);
 
+app.get("/",(req, res)=>{
+res.send("Welcome to my project")
+})
+
 app.use("*", (req, res) => {
   res.send("404 not found");
 });
